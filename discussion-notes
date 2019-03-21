@@ -1,0 +1,12 @@
+* Refer to Penrose Graphical Notation, String Diagrams, Quantum Circuits, MBQC
+* Include some applications in lead (MQBC and lattice surgery)
+* Soundness and completeness not in introduction
+* Ignore scalars
+* Right left-to-right. Don't pick an orientation!
+* Formulate rigourousness in lead, not emphasize it too much though
+* Include Clifford-rules, but maybe not all rules for completeness?
+* Include extended Euler Decomposition rule in Completeness Section
+* Examples:
+      - Circuit to GHZ -- Introduce Colour Change, Spider Fusion, Identity Removal
+      - Magic state injection (use $a\pi$ to denote measurement-outcome) -- Introduce Pi-Copy
+      - 3 CNOTs is a SWAP, by strong-complementarity -- Introduce Strong Complementarity
