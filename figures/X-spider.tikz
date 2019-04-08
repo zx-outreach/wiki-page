@@ -1,0 +1,17 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=rn phase] (0) at (0, 0) {$\alpha$};
+		\node [style=none] (1) at (1.25, 1.25) {};
+		\node [style=none] (2) at (1.25, -1.25) {};
+		\node [style=none] (3) at (-1.25, 1.25) {};
+		\node [style=none] (4) at (-1.25, -1.25) {};
+		\node [rotate=90, style=none] (5) at (0.75, 0) {$\cdots$};
+		\node [rotate=90, style=none] (6) at (-0.75, 0) {$\cdots$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [bend left] (3.center) to (0);
+		\draw [bend left] (0) to (1.center);
+		\draw [bend right] (0) to (2.center);
+		\draw [bend left] (0) to (4.center);
+	\end{pgfonlayer}
+\end{tikzpicture}

@@ -1,0 +1,45 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=rn] (0) at (-2.5, -0.75) {};
+		\node [style=none] (1) at (-4, -0.75) {};
+		\node [style=none] (2) at (-1.75, -0.75) {};
+		\node [style=gn] (4) at (-3.25, 0.75) {};
+		\node [style=none] (5) at (-4, 0.75) {};
+		\node [style=none] (6) at (-1.75, 0.75) {};
+		\node [style=rn] (7) at (1.5, -0.75) {};
+		\node [style=none] (8) at (0.75, -0.75) {};
+		\node [style=none] (9) at (3, -0.75) {};
+		\node [style=gn] (10) at (2.25, 0.75) {};
+		\node [style=none] (11) at (0.75, 0.75) {};
+		\node [style=none] (12) at (3, 0.75) {};
+		\node [style=none] (13) at (-0.5, 0) {=};
+		\node [style=rn] (14) at (6.5, -0.75) {};
+		\node [style=none] (15) at (5.5, -0.75) {};
+		\node [style=none] (16) at (7.5, -0.75) {};
+		\node [style=gn] (17) at (6.5, 0.75) {};
+		\node [style=none] (18) at (5.5, 0.75) {};
+		\node [style=none] (19) at (7.5, 0.75) {};
+		\node [style=none] (20) at (4.25, 0) {:=};
+		\node [style=none] (21) at (8.75, 0) {$\rightsquigarrow$};
+		\node [style=cnot targ] (22) at (10.75, -0.75) {};
+		\node [style=none] (23) at (9.75, -0.75) {};
+		\node [style=none] (24) at (11.75, -0.75) {};
+		\node [style=cnot ctrl] (25) at (10.75, 0.75) {};
+		\node [style=none] (26) at (9.75, 0.75) {};
+		\node [style=none] (27) at (11.75, 0.75) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw (1.center) to (2.center);
+		\draw (5.center) to (6.center);
+		\draw (4) to (0);
+		\draw (8.center) to (9.center);
+		\draw (11.center) to (12.center);
+		\draw (10) to (7);
+		\draw (15.center) to (16.center);
+		\draw (18.center) to (19.center);
+		\draw (17) to (14);
+		\draw (23.center) to (24.center);
+		\draw (26.center) to (27.center);
+		\draw (25) to (22);
+	\end{pgfonlayer}
+\end{tikzpicture}

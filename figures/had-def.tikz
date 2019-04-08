@@ -1,0 +1,24 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (31) at (-1.75, 0) {};
+		\node [style=gn] (39) at (-3, 0) {};
+		\node [style=box] (40) at (-3, 0) {H};
+		\node [style=none] (44) at (2.75, 0) {};
+		\node [style=none] (48) at (1, 0) {};
+		\node [style=none] (51) at (-0.5, 0) {$\rightsquigarrow$};
+		\node [style=none] (52) at (-4.25, 0) {};
+		\node [style=hadamard] (53) at (1.875, 0) {};
+		\node [style=none] (54) at (3.75, 0) {:=};
+		\node [style=none] (55) at (8.25, 0) {};
+		\node [style=none] (56) at (4.75, 0) {};
+		\node [style=gn phase] (57) at (5.5, 0) {$\frac\pi2$};
+		\node [style=rn phase] (58) at (6.5, 0) {$\frac\pi2$};
+		\node [style=gn phase] (59) at (7.5, 0) {$\frac\pi2$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw (39) to (31.center);
+		\draw (52.center) to (40);
+		\draw (48.center) to (44.center);
+		\draw (56.center) to (55.center);
+	\end{pgfonlayer}
+\end{tikzpicture}

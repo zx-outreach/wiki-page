@@ -1,0 +1,31 @@
+\usepackage{xspace}
+\usepackage{bm}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{fadings}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{decorations.markings}
+
+\definecolor{zx_red}{RGB}{227, 145, 145}
+\definecolor{zx_green}{RGB}{216, 248, 216}
+
+\newcommand{\bra}[1]{\ensuremath{\left\langle #1 \right|}}
+\newcommand{\ket}[1]{\ensuremath{\left|  #1 \right\rangle}}
+\newcommand{\braket}[2]{\ensuremath{\langle#1|#2\rangle}}
+\newcommand{\ketbra}[2]{\ensuremath{\ket{#1}\!\bra{#2}}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+
+
+\usepackage[frame,line,arrow,matrix,tips]{xy}
+\def\dmeterwide#1#2{{\xy <0pt,-8pt>;<0pt,8pt> **@{-};
+            <0pt,-8pt>;<#2,-8pt> **@{-} ;
+            <0pt, 8pt>;<#2, 8pt> **@{-} ;
+            <#2,0pt>-<5pt,0pt>*{#1} ;
+            <#2,0pt>*\cir<8pt>{r_l}\endxy}}
+
+\def\dmeter#1{\dmeterwide{#1}{12pt}}
+\def\measure{\dmeterwide{~~\,Z}{5pt}}

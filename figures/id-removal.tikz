@@ -1,0 +1,26 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (31) at (-1.75, 0.5) {};
+		\node [style=gn] (39) at (-3, 0.5) {};
+		\node [style=gn] (40) at (-3, 0.5) {};
+		\node [style=none] (44) at (3.5, 0.5) {};
+		\node [style=none] (48) at (1.75, 0.5) {};
+		\node [style=none] (51) at (0, 0.5) {=};
+		\node [style=none] (52) at (-4.25, 0.5) {};
+		\node [style=none] (53) at (-1.75, -0.75) {};
+		\node [style=gn] (54) at (-3, -0.75) {};
+		\node [style=rn] (55) at (-3, -0.75) {};
+		\node [style=none] (56) at (3.5, -0.75) {};
+		\node [style=none] (57) at (1.75, -0.75) {};
+		\node [style=none] (58) at (0, -0.75) {=};
+		\node [style=none] (59) at (-4.25, -0.75) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw (39) to (31.center);
+		\draw (52.center) to (40);
+		\draw (48.center) to (44.center);
+		\draw (54) to (53.center);
+		\draw (59.center) to (55);
+		\draw (57.center) to (56.center);
+	\end{pgfonlayer}
+\end{tikzpicture}

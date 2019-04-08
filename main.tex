@@ -1,0 +1,86 @@
+\documentclass[a4paper, 12pt]{article}
+
+\input{preamble.tex}
+
+\begin{document}
+{\Huge ZX-calculus} \\
+
+The \textbf{ZX-calculus} is a \emph{graphical language} for reasoning about linear maps between \emph{qubits}. The calculus consists of a set of generators from which diagrams can be made, and a set of rules that govern how diagrams can be transformed into one another. The ZX-calculus is \emph{universal} in the sense that any linear map between qubits can be represented as a ZX-diagram. The standard set of rewrite rules for the ZX-calculus is \emph{complete} for the \emph{stabilizer fragment}, meaning that if two ZX-diagrams represent the same stabilizer computation, then each diagram can be rewritten into the other by application of the rules. There exist extensions to this rule-set that make the ZX-calculus complete for all linear maps between qubits.
+
+\section{Definition and examples}
+The building blocks of ZX-diagrams are referred to as spiders. There are two types of spiders, Z-spiders (commonly depicted as white or green), and X-spiders (commonly depicted as grey or red):
+\begin{equation*}
+    \tikzfig{Z-spider} \qquad \qquad \tikzfig{X-spider}
+\end{equation*}
+A spider can have an arbitrary amount of inputs (wires entering from the left) and outputs (exiting from the right). They can furthermore be labelled by a phase, which is a real number commonly taken to be in the interval $[-2\pi, 2\pi]$. If the phase is zero it is usually not written.
+
+The interpretation of a spider as a linear map is given by
+\begin{equation*}
+    \tikzfig{Z-spider}\ := \ \ketbra{0...0}{0...0} +
+e^{i \alpha} \ketbra{1...1}{1...1} \hfill
+\qquad
+\hfill \tikzfig{X-spider} \ := \ \ketbra{+...+}{+...+} +
+e^{i \alpha} \ketbra{-...-}{-...-}
+\end{equation*}
+where $\ket{0}$ and $\ket{1}$ represent the standard computational basis state of a qubit, written in \emph{Dirac notation}, and $\ket{\pm} = \frac{1}{\sqrt{2}} (\ket{0} \pm \ket{1})$. Using this correspondence we can write down some well-known states and maps from quantum mechanics:
+\begin{equation*}
+  \begin{array}{rclcrcl}
+  \tikzfig{ket-+} & = & \ket{0} + \ket{1} \ \propto \ket{+} &
+  \qquad &
+  \tikzfig{ket-0} & = & \ket{+} + \ket{-} \ \propto \ket{0} \\
+  &\quad& & & \quad \\
+  \tikzfig{Z-a} & = & \ketbra{0}{0} + e^{i \alpha} \ketbra{1}{1} =
+  Z_\alpha &
+  & 
+  \tikzfig{X-a} & = & \ketbra{+}{+} + e^{i \alpha} \ketbra{-}{-} = X_\alpha
+  \end{array}
+\end{equation*}
+Here, $Z_\alpha$ and $X_\alpha$ correspond to rotations over the \emph{Bloch sphere}  in the $Z$ and $X$ axis. In particular $Z_\pi$ and $X_\pi$ are the Z and X \emph{Pauli matrices}.
+
+
+By juxtaposing spiders we create the \emph{tensor product} of the linear maps they represent, and by connecting wires we can compose the linear maps. As the single input, single output Z-spider represents a rotation over the Z-axis in the Bloch sphere, we see that we have:
+\begin{equation*}
+    \tikzfig{phase-gate-compose}
+\end{equation*}
+Where the equality sign means that the two diagrams represent the same linear map, up to a global non-zero scalar factor. This equation can be generalised to spiders with an arbitrary amount of outgoing wires:
+\begin{equation*}
+    \tikzfig{Z-spider-fusion} \qquad\qquad \tikzfig{X-spider-fusion}
+\end{equation*}
+This is known as the \emph{spider fusion rule}. The rules of the ZX-calculus allow one to rewrite diagrams while preserving their interpretations as linear maps.
+
+By combining the two types of spiders we can make a \emph{CNOT} gate:
+\begin{equation*}
+    \tikzfig{cnot}
+\end{equation*}
+That these different diagrams are equal is due to the meta-rule that \emph{only topology matters}. This means that when two ZX-diagrams can be transformed into one another by topological deformation, then they represent the same linear maps.
+
+The \emph{Hadamard} gate is of special importance to the ZX-calculus, and therefore it is denoted with special notation, namely a yellow box:
+\begin{equation*}
+    \tikzfig{had-def}
+\end{equation*}
+This combination of three spiders constitutes a \emph{Euler decomposition} of the Hadamard gate, that is equal to the regular definition of the Hadamard gate up to global phase. The Hadamard gate interchanges the Z- and X-axis of the Bloch sphere. This gives rise to the \emph{colour change rule} of the ZX-calculus:
+\begin{equation*}
+    \tikzfig{colour-change}
+\end{equation*}
+
+We can use these representations of gates and the colour change and spider fusion rule in order to reason about quantum circuits. Consider for instance the following example of a circuit that prepares the \emph{GHZ}-state $\ket{000}+\ket{111}$:
+\begin{equation*}
+    \tikzfig{ghz-circuit}
+\end{equation*}
+We used a second rule here, which is \emph{identity removal}:
+\begin{equation*}
+    \tikzfig{id-removal}
+\end{equation*}
+
+The Pauli X gate has a well-known commutation relation with Z-rotations of the form $Z_\alpha X = XZ_{-\alpha}$. This is captured by $\pi$-copy rule:
+\begin{equation*}
+        \tikzfig{pi-copy}
+\end{equation*}
+
+Using this rule we can derive the \emph{phase-gate teleportation} schema, where we prepare a phase rotated state, and then use a CNOT and classical measurement to perform it on the qubit:
+\begin{equation*}
+    \tikzfig{phase-gate-teleportation}
+\end{equation*}
+
+
+\end{document}
