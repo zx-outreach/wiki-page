@@ -7,7 +7,7 @@
 
 The \textbf{ZX-calculus} is a \emph{graphical language} for reasoning about linear maps between \emph{qubits}. The calculus consists of a set of generators from which diagrams can be made, and a set of rules that govern how diagrams can be transformed into one another. The ZX-calculus is \emph{universal} in the sense that any linear map between qubits can be represented as a ZX-diagram. The standard set of rewrite rules for the ZX-calculus is \emph{complete} for the \emph{stabilizer fragment}, meaning that if two ZX-diagrams represent the same stabilizer computation, then each diagram can be rewritten into the other by application of the rules. There exist extensions to this rule-set that make the ZX-calculus complete for all linear maps between qubits.
 
-\section{Definition and examples}
+\section{ZX-diagrams}
 The building blocks of ZX-diagrams are referred to as spiders. There are two types of spiders, Z-spiders (commonly depicted as white or green), and X-spiders (commonly depicted as grey or red):
 \begin{equation*}
     \tikzfig{Z-spider} \qquad \qquad \tikzfig{X-spider}
@@ -38,7 +38,10 @@ where $\ket{0}$ and $\ket{1}$ represent the standard computational basis state o
 Here, $Z_\alpha$ and $X_\alpha$ correspond to rotations over the \emph{Bloch sphere}  in the $Z$ and $X$ axis. In particular $Z_\pi$ and $X_\pi$ are the Z and X \emph{Pauli matrices}.
 
 
-By juxtaposing spiders we create the \emph{tensor product} of the linear maps they represent, and by connecting wires we can compose the linear maps. As the single input, single output Z-spider represents a rotation over the Z-axis in the Bloch sphere, we see that we have:
+By juxtaposing spiders we create the \emph{tensor product} of the linear maps they represent, and by connecting wires we can compose the linear maps. 
+
+\section{The rules of the ZX-calculus}
+As the single input, single output Z-spider represents a rotation over the Z-axis in the Bloch sphere, we see that we have:
 \begin{equation*}
     \tikzfig{phase-gate-compose}
 \end{equation*}
