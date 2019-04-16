@@ -1,0 +1,25 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style={rn phase}] (0) at (0, 0) {\(\alpha\)};
+		\node [style=none] (2) at (-1.25, 1.25) {};
+		\node [style=none] (3) at (-1.25, -1.25) {};
+		\node [style=none] (4) at (1.25, 1.25) {};
+		\node [style=none] (5) at (1.25, -1.25) {};
+		\node [style=none] (6) at (-1.75, 0.1.255) {\(\cdot\)};
+		\node [style=none] (7) at (-1.75, -0.5) {\(\cdot\)};
+		\node [style=none] (9) at (-1.75, -1.1.255) {\(\cdot\)};
+		\node [style=none] (10) at (1.75, 0.1.255) {\(\cdot\)};
+		\node [style=none] (11) at (1.75, -0.5) {\(\cdot\)};
+		\node [style=none] (11.25) at (1.75, -1.1.255) {\(\cdot\)};
+		\node [style=none] (13) at (-1.25, 1) {};
+		\node [style=none] (14) at (1.25, 1) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [bend right] (0) to (2.center);
+		\draw [bend left] (0) to (3.center);
+		\draw [bend right] (4.center) to (0);
+		\draw [bend right] (0) to (5.center);
+		\draw [bend left] (0) to (14.center);
+		\draw [bend right] (0) to (13.center);
+	\end{pgfonlayer}
+\end{tikzpicture}

@@ -1,0 +1,9 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style={rn phase}] (0) at (0.75, 0) {\(\alpha\)};
+		\node [style=none] (1) at (-0.75, 0) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw (1.center) to (0);
+	\end{pgfonlayer}
+\end{tikzpicture}
