@@ -3,7 +3,7 @@ import subprocess
 import time
 
 
-TEX = r"""\documentclass[tikz,convert={outfile=svg/replaceme.svg}]{standalone}
+TEX = r"""\documentclass[tikz]{standalone}
 \usepackage{tikzit}
 \input{zx.tikzdefs}
 \input{zx.tikzstyles}
@@ -17,10 +17,13 @@ for figure in os.listdir("figures"):
         figname = figure[:-5]
         f = open("convert_this.tex",'w')
         tex = TEX.replace("replaceme",figname)
-        print(tex)
+        #print(tex)
         f.write(tex)
         f.close()
         time.sleep(0.1)
         print("Processing", figure)
-        subprocess.call(["pdflatex", "--shell-escape", "convert_this.tex"])
+        subprocess.call(["latex", "convert_this.tex"])
+        time.sleep(0.4)
+        subprocess.call(["dvisvgm", "convert_this.dvi"])
+        os.rename("convert_this.svg","svg\\{}.svg".format(figname))
         
