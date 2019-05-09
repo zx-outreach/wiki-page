@@ -18,19 +18,24 @@ Also in 2017 the book \emph{Picturing Quantum Processes} was released, that buil
 
 
 \section{Informal introduction}
-ZX-diagrams consist of green and red nodes called \emph{spiders}, which can be connected in any manner. A ZX-diagram represents a linear map between \emph{qubits}, similar to the way in which \emph{quantum circuit notation} allows one to represent \emph{unitary} maps between qubits. But ZX-diagrams are unlike quantum circuits in two ways. The first is that ZX-diagrams do not have to conform to the strict topology of circuits, and hence can be deformed arbitrarily. The second is that ZX-diagrams come equipped with with a set of rewrite rules collectively referred to as the \emph{ZX-calculus}. Using these rules, calculations can be performed in the graphical language itself.
+ZX-diagrams consist of green and red nodes called \emph{spiders}, which are connected by wires. Wires may curve and cross, arbitrarily many wires may connect to the same spider, and multiple wires can go between the same pair of nodes. There are also Hadamard nodes, usually denoted by a yellow box, which always connect to exactly two wires.
 
-For instance, consider the following example of a circuit that constructs a \emph{GHZ-state}. By translating it into a ZX-diagram, we can prove that it in fact does implement such a state:
+ZX-diagrams represent linear maps between \emph{qubits}, similar to the way in which \emph{quantum circuits} represent \emph{unitary} maps between qubits. Yet ZX-diagrams are unlike quantum circuits in two ways. The first is that ZX-diagrams do not have to conform to the rigid topological structure of circuits, and hence can be deformed arbitrarily. The second is that ZX-diagrams come equipped with with a set of rewrite rules, collectively referred to as the \emph{ZX-calculus}. Using these rules, calculations can be performed in the graphical language itself.
+
+For instance, consider the following example of a circuit that constructs a \emph{GHZ-state}. By translating it into a ZX-diagram, we can prove that it does indeed implement this state, using the rules that ``adjacent spiders of the same colour merge'' and ``Hadamard changes the colour of spiders'':
 \begin{equation*}
     \tikzfig{ghz-circuit}
 \end{equation*}
 
-ZX-diagrams are \emph{universal}, meaning that any linear map between qubits can be represented by a ZX-diagrams. Certain versions of the ZX-calculus are \emph{complete}, meaning that if 
+Any linear map between qubits can be represented as a ZX-diagram, i.e.\ ZX-diagrams are \emph{universal}. A given ZX-diagram can be transformed into another ZX-diagram using the rewrite rules of the ZX-calculus if and only if the two diagrams represent the same linear map, i.e.\ the ZX-calculus is \emph{sound} %% https://en.wikipedia.org/wiki/Soundness
+and \emph{complete}. % https://en.wikipedia.org/wiki/Completeness_(logic)
 
 \section{Formal Definition}
 
 something about ZX-diagrams as annotated graphs or something....
 also maybe about compositionality?
+
+ZX-diagrams are \emph{universal}, meaning that any linear map between qubits can be represented by a ZX-diagrams. Certain versions of the ZX-calculus are \emph{complete}, meaning that if 
 
 \subsection{Generators}
 
