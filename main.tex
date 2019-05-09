@@ -18,6 +18,14 @@ Also in 2017 the book \emph{Picturing Quantum Processes} was released, that buil
 
 
 \section{Informal introduction}
+ZX-diagrams consist of green and red nodes called \emph{spiders}, which can be connected in any manner. A ZX-diagram represents a linear map between \emph{qubits}, similar to the way in which \emph{quantum circuit notation} allows one to represent \emph{unitary} maps between qubits. But ZX-diagrams are unlike quantum circuits in two ways. The first is that ZX-diagrams do not have to conform to the strict topology of circuits, and hence can be deformed arbitrarily. The second is that ZX-diagrams come equipped with with a set of rewrite rules collectively referred to as the \emph{ZX-calculus}. Using these rules, calculations can be performed in the graphical language itself.
+
+For instance, consider the following example of a circuit that constructs a \emph{GHZ-state}. By translating it into a ZX-diagram, we can prove that it in fact does implement such a state:
+\begin{equation*}
+    \tikzfig{ghz-circuit}
+\end{equation*}
+
+ZX-diagrams are \emph{universal}, meaning that any linear map between qubits can be represented by a ZX-diagrams. Certain versions of the ZX-calculus are \emph{complete}, meaning that if 
 
 \section{Formal Definition}
 
