@@ -24,6 +24,6 @@ for figure in os.listdir("figures"):
         print("Processing", figure)
         subprocess.call(["latex", "convert_this.tex"])
         time.sleep(0.4)
-        subprocess.call(["dvisvgm", "convert_this.dvi"])
+        subprocess.call(["dvisvgm","--no-fonts", "convert_this.dvi"])
         os.rename("convert_this.svg","svg\\{}.svg".format(figname))
         
