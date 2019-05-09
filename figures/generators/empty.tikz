@@ -1,0 +1,14 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (4) at (0.5, 0.5) {};
+		\node [style=none] (5) at (-0.5, 0.5) {};
+		\node [style=none] (6) at (0.5, -0.5) {};
+		\node [style=none] (7) at (-0.5, -0.5) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [dashed, color=gray] (5.center) to (7.center);
+		\draw [dashed, color=gray] (7.center) to (6.center);
+		\draw [dashed, color=gray] (6.center) to (4.center);
+		\draw [dashed, color=gray] (4.center) to (5.center);
+	\end{pgfonlayer}
+\end{tikzpicture}

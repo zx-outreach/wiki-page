@@ -32,12 +32,51 @@ and \emph{complete}. % https://en.wikipedia.org/wiki/Completeness_(logic)
 
 \section{Formal Definition}
 
-something about ZX-diagrams as annotated graphs or something....
-also maybe about compositionality?
+ZX-diagrams are the morphisms of a category whose objects are non-negative integers; a ZX-diagram with $n$ input wires on the left and $m$ output wires on the right is a morphism from $n$ to $m$.
+Two morphisms compose by putting the diagrams one after the other and connecting the ouputs of the first to the inputs of the second.
+The identity morphism on $0$ is an empty diagram; for $n>0$, the identity morphism on $n$ consists of $n$ parallel wires.
 
-ZX-diagrams are \emph{universal}, meaning that any linear map between qubits can be represented by a ZX-diagrams. Certain versions of the ZX-calculus are \emph{complete}, meaning that if 
+The category is monoidal with the monoidal product of two diagrams being represented by stacking the diagrams on top of each other. It is also dagger compact. %%% expand
+
+% something about ZX-diagrams as annotated graphs or something....
+% also maybe about compositionality?
+% 
+% ZX-diagrams are \emph{universal}, meaning that any linear map between qubits can be represented by a ZX-diagrams. Certain versions of the ZX-calculus are \emph{complete}, meaning that if 
+
 
 \subsection{Generators}
+All ZX-diagrams are built from eight generators via composition and monoidal product. The following table gives the generators together with their standard interpretations as linear maps, expressed in Dirac notation. The computational basis states are denoted $\ket{0}, \ket{1}$ and the Hadamard-transformed basis states are
+\[
+ \ket{+} = \frac{1}{\sqrt{2}}(\ket{0}+\ket{1}), \qquad \ket{-} = \frac{1}{\sqrt{2}}(\ket{0}-\ket{1}).
+\]
+The $n$-fold tensor product of some vector $\ket{\psi}$ with itself is written as $\ket{\psi}^{\otimes n}$.
+
+%% this wants to be a table
+\begin{tabular}{|c|c|l|}
+ \hline
+ \tikzfig{figures/generators/empty} & $0\to0$ & $1$ \\
+ --- & $1\to1$ & $\ket{0}\bra{0}+\ket{1}\bra{1}$ \\
+ \tikzfig{figures/generators/left-ear} & $0\to2$ & $\ket{00}+\ket{11}$ \\
+ \tikzfig{figures/generators/right-ear} & $2\to 0$ & $\bra{00}+\bra{11}$ \\
+ \tikzfig{figures/generators/swap} & $2\to 2$ & $\ket{00}\bra{00}+\ket{01}\bra{10}+\ket{10}\bra{01}+\ket{11}\bra{11}$ \\
+ \tikzfig{figures/generators/green-spider} & $n\to m$ & $\ket{0}^{\otimes m}\bra{0}^{\otimes n} + e^{i\alpha}\ket{1}^{\otimes m}\bra{1}^{\otimes n}$ \\ %% picture is a hack, but I do want the braces
+ \tikzfig{figures/generators/red-spider} & $n\to m$ & $\ket{+}^{\otimes m}\bra{+}^{\otimes n} + e^{i\alpha}\ket{-}^{\otimes m}\bra{-}^{\otimes n}$ \\
+ \tikzfig{figures/generators/had} & $1\to 1$ & $\ket{+}\bra{0}+\ket{-}\bra{1}$ \\
+ \hline
+\end{tabular}
+
+The first generator is an empty diagram, the dashed box is only there to indicate ``this space intentionally left blank''.
+
+The standard interpretation of the generators extends to a monoidal functor from the category of ZX-diagrams to the category of finite-dimensional Hilbert spaces, thus any ZX-diagram built from the generators has a well-defined interpretation as a linear map.
+
+Among the three types of generators green spider, red spider, and Hadamard, one is superfluous: any one of the three can be expressed in terms of the other two. Some versions of the ZX-calculus therefore consider the Hadamard node as a syntactic sugar rather than a generator. Other versions add a further syntactic sugar, a triangle node with one input and one output, representing the non-unitary map $\ket{0}\bra{0}+\ket{0}\bra{1}+\ket{1}\bra{1}$.
+% add picture of triangle or remove this
+
+\subsection{Rewrite rules}
+...
+
+\subsection{Generators, informally}
+%% add these to informal introduction
 
 The building blocks or \underline{generators} of the ZX-calculus are graphical
 representations of \emph{specific} \underline{states}, \underline{unitaries},
