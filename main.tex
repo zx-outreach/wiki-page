@@ -52,7 +52,7 @@ All ZX-diagrams are built from eight generators via composition and monoidal pro
 The $n$-fold tensor product of some vector $\ket{\psi}$ with itself is written as $\ket{\psi}^{\otimes n}$.
 
 %% this wants to be a table
-\begin{tabular}{|l|c|c|l|}
+\noindent\begin{tabular}{|l|c|c|l|}
  \hline
  empty diagram & \tikzfig{figures/generators/empty} & $0\to0$ & $1$ \\
  wire & --- & $1\to1$ & $\ket{0}\bra{0}+\ket{1}\bra{1}$ \\
@@ -73,7 +73,23 @@ Among the three types of generators green spider, red spider, and Hadamard, one 
 % add picture of triangle or remove this
 
 \subsection{Rewrite rules}
-...
+
+There are many different versions of the ZX-calculus, using different systems of rewrite rules as axioms. The following are some of the core set of rules, here given ``up to scalar factor'': i.e.\ two diagrams $D_1$ and $D_2$ are considered to be equal if their interpretations differ by a non-zero complex factor.
+
+\begin{tabular}{|c|p{8cm}|}
+ \hline
+ \tikzfig{Z-spider-fusion} & The \emph{green spider rule} corresponds to the fact that the green spider represents an orthonormal basis -- the computational basis. \\ %% what do we do about the fact that there must be at least one connection in the middle whereas everywhere else \ldots means ``0 or more''
+ \tikzfig{X-spider-fusion} & The \emph{red spider rule} corresponds to the fact that the red spider represents an orthonormal basis -- the Hadamard-transformed basis. \\
+ \tikzfig{left-ear-rule} & The Bell state is the same, whether expressed in the computational basis or the Hadamard-transformed basis. It can also be expressed as a ``left ear'' wire. In category-theoretical terms, the compact structures induced by green and red spiders coincide. \\
+ \tikzfig{colour-change} & The \emph{colour change rule} expresses the property that the Hadamard node maps between the computational basis and the Hadamard-transformed basis. \\
+ \tikzfig{copy} & The \emph{copy rule} states that a green spider copies degree-1 red spiders. An analogous rule holds with the colours swapped. \\
+ \tikzfig{bialgebra} & The \emph{bialgebra rule} expresses the property that computational and Hadamard-transformed basis are strongly complementary. \\
+ \tikzfig{Euler-dec} & The \emph{Euler decomposition of the Hadamard node} expresses the fact that the Hadamard matrix -- like any unitary matrix -- can be expressed as a product of three rotations about two axes. \\
+ \hline
+\end{tabular}
+
+
+
 
 \subsection{Generators, informally}
 %% add these to informal introduction

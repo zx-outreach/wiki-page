@@ -1,0 +1,17 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (44) at (-1, 0) {};
+		\node [style=none] (48) at (-2.75, 0) {};
+		\node [style=hadamard] (53) at (-1.875, 0) {};
+		\node [style=none] (54) at (0, 0) {=};
+		\node [style=none] (55) at (4.5, 0) {};
+		\node [style=none] (56) at (1, 0) {};
+		\node [style=gn phase] (57) at (1.75, 0) {$\frac\pi2$};
+		\node [style=rn phase] (58) at (2.75, 0) {$\frac\pi2$};
+		\node [style=gn phase] (59) at (3.75, 0) {$\frac\pi2$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw (48.center) to (44.center);
+		\draw (56.center) to (55.center);
+	\end{pgfonlayer}
+\end{tikzpicture}
