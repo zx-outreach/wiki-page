@@ -32,7 +32,7 @@ and \emph{complete}. % https://en.wikipedia.org/wiki/Completeness_(logic)
 
 \section{Formal Definition}
 
-ZX-diagrams are the morphisms of a category whose objects are non-negative integers; a ZX-diagram with $n$ input wires on the left and $m$ output wires on the right is a morphism from $n$ to $m$.
+ZX-diagrams are the morphisms of a category whose objects are non-negative integers; a ZX-diagram with $n$ input wires on the left and $m$ output wires on the right is a morphism from $n$ to $m$.\footnote{ZX-diagrams may be written with different orientations: here, they are written horizontally from left to right like quantum circuits, but much of the literature uses a vertical orientation, either bottom-to-top or top-to-bottom.}
 Two morphisms compose by putting the diagrams one after the other and connecting the ouputs of the first to the inputs of the second.
 The identity morphism on $0$ is an empty diagram; for $n>0$, the identity morphism on $n$ consists of $n$ parallel wires.
 
@@ -69,8 +69,9 @@ The first generator is an empty diagram, the dashed box is only there to indicat
 
 The standard interpretation of the generators extends to a monoidal functor from the category of ZX-diagrams to the category of finite-dimensional Hilbert spaces, thus any ZX-diagram built from the generators has a well-defined interpretation as a linear map.
 
-Among the three types of generators green spider, red spider, and Hadamard, one is superfluous: any one of the three can be expressed in terms of the other two. Some versions of the ZX-calculus therefore consider the Hadamard node as a syntactic sugar rather than a generator. Other versions add a further syntactic sugar, a triangle node with one input and one output, representing the non-unitary map $\ket{0}\bra{0}+\ket{0}\bra{1}+\ket{1}\bra{1}$.
+Among the three types of generating nodes (green spider, red spider, and Hadamard), one is superfluous: any one of the three can be expressed in terms of the other two. Some versions of the ZX-calculus therefore consider the Hadamard node as a syntactic sugar rather than a generator. Other versions add a further syntactic sugar, a triangle node with one input and one output, representing the non-unitary map $\ket{0}\bra{0}+\ket{0}\bra{1}+\ket{1}\bra{1}$.
 % add picture of triangle or remove this
+
 
 \subsection{Rewrite rules}
 
@@ -90,6 +91,9 @@ There are many different versions of the ZX-calculus, using different systems of
 
 
 
+
+%% only topology matters
+%% explict rules -- only core set?
 
 \subsection{Generators, informally}
 %% add these to informal introduction
