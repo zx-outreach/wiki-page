@@ -1,25 +1,29 @@
-\begin{tikzpicture}[decoration=brace, rotate=90]
+\begin{tikzpicture}[decoration=brace]
 	\begin{pgfonlayer}{nodelayer}
-		\node [style=none] (0) at (-0.6, 1) {};
-		\node [style=none] (1) at (0, 0.9) {$\vdots$};
-		\node [style=none] (2) at (0.6, 1) {};
-		\node [style=gn] (3) at (0, 0) {$\alpha$};
-		\node [style=none] (4) at (-0.6, -1) {};
-		\node [style=none] (5) at (0, -0.9) {$\vdots$};
-		\node [style=none] (6) at (0.6, -1) {};
-		\node [style=none] (7) at (-0.7, 1.1) {};
-		\node [style=none] (8) at (0.7, 1.1) {};
-		\node [style=none] (9) at (-0.7, -1.1) {};
-		\node [style=none] (10) at (0.7, -1.1) {};
-		\node [style=none] (11) at (0, 1.6) {$n$};
-		\node [style=none] (12) at (0, -1.6) {$m$};
+		\node [style=gn phase] (0) at (0, 0) {$\alpha$};
+		\node [style=none] (1) at (1.25, 1.25) {};
+		\node [style=none] (2) at (1.25, -1.25) {};
+		\node [style=none] (3) at (-1.25, 1.25) {};
+		\node [style=none] (4) at (-1.25, -1.25) {};
+		\node [rotate=90, style=none] (5) at (1, -0.25) {$\cdots$};
+		\node [rotate=90, style=none] (6) at (-1, -0.25) {$\cdots$};
+		\node [style=none] (7) at (-1.25, 0.75) {};
+		\node [style=none] (8) at (1.25, 0.75) {};
+		\node [style=none] (9) at (-1.5, -1.5) {};
+		\node [style=none] (10) at (-1.5, 1.5) {};
+		\node [style=none] (11) at (1.5, 1.5) {};
+		\node [style=none] (12) at (1.5, -1.5) {};
+		\node [style=none] (13) at (-2.25, 0) {$n$};
+		\node [style=none] (14) at (2.25, 0) {$m$};
 	\end{pgfonlayer}
 	\begin{pgfonlayer}{edgelayer}
-		\draw [bend left=15] (3) to (6.center);
-		\draw [bend right=15] (3) to (4.center);
-		\draw [bend right=15] (0.center) to (3);
-		\draw [bend right=15] (3) to (2.center);
-		\draw [decorate] (7.center) to (8.center);
-		\draw [decorate] (10.center) to (9.center);
+		\draw [bend left] (3.center) to (0);
+		\draw [bend left] (0) to (1.center);
+		\draw [bend right] (0) to (2.center);
+		\draw [bend left] (0) to (4.center);
+		\draw [bend left=15] (7.center) to (0);
+		\draw [bend right=15] (8.center) to (0);
+		\draw [decorate] (9.center) to (10.center);
+		\draw [decorate] (11.center) to (12.center);
 	\end{pgfonlayer}
 \end{tikzpicture}

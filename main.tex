@@ -52,16 +52,16 @@ All ZX-diagrams are built from eight generators via composition and monoidal pro
 The $n$-fold tensor product of some vector $\ket{\psi}$ with itself is written as $\ket{\psi}^{\otimes n}$.
 
 %% this wants to be a table
-\begin{tabular}{|c|c|l|}
+\begin{tabular}{|l|c|c|l|}
  \hline
- \tikzfig{figures/generators/empty} & $0\to0$ & $1$ \\
- --- & $1\to1$ & $\ket{0}\bra{0}+\ket{1}\bra{1}$ \\
- \tikzfig{figures/generators/left-ear} & $0\to2$ & $\ket{00}+\ket{11}$ \\
- \tikzfig{figures/generators/right-ear} & $2\to 0$ & $\bra{00}+\bra{11}$ \\
- \tikzfig{figures/generators/swap} & $2\to 2$ & $\ket{00}\bra{00}+\ket{01}\bra{10}+\ket{10}\bra{01}+\ket{11}\bra{11}$ \\
- \tikzfig{figures/generators/green-spider} & $n\to m$ & $\ket{0}^{\otimes m}\bra{0}^{\otimes n} + e^{i\alpha}\ket{1}^{\otimes m}\bra{1}^{\otimes n}$ \\ %% picture is a hack, but I do want the braces
- \tikzfig{figures/generators/red-spider} & $n\to m$ & $\ket{+}^{\otimes m}\bra{+}^{\otimes n} + e^{i\alpha}\ket{-}^{\otimes m}\bra{-}^{\otimes n}$ \\
- \tikzfig{figures/generators/had} & $1\to 1$ & $\ket{+}\bra{0}+\ket{-}\bra{1}$ \\
+ empty diagram & \tikzfig{figures/generators/empty} & $0\to0$ & $1$ \\
+ wire & --- & $1\to1$ & $\ket{0}\bra{0}+\ket{1}\bra{1}$ \\
+ left ear & \tikzfig{figures/generators/left-ear} & $0\to2$ & $\ket{00}+\ket{11}$ \\
+ right ear & \tikzfig{figures/generators/right-ear} & $2\to 0$ & $\bra{00}+\bra{11}$ \\
+ swap & \tikzfig{figures/generators/swap} & $2\to 2$ & $\ket{00}\bra{00}+\ket{01}\bra{10}+\ket{10}\bra{01}+\ket{11}\bra{11}$ \\
+ green spider & \tikzfig{figures/generators/green-spider} & $n\to m$ & $\ket{0}^{\otimes m}\bra{0}^{\otimes n} + e^{i\alpha}\ket{1}^{\otimes m}\bra{1}^{\otimes n}$ \\ %% picture is a hack, but I do want the braces
+ red spider & \tikzfig{figures/generators/red-spider} & $n\to m$ & $\ket{+}^{\otimes m}\bra{+}^{\otimes n} + e^{i\alpha}\ket{-}^{\otimes m}\bra{-}^{\otimes n}$ \\
+ Hadamard & \tikzfig{figures/generators/had} & $1\to 1$ & $\ket{+}\bra{0}+\ket{-}\bra{1}$ \\
  \hline
 \end{tabular}
 
