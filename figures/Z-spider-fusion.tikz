@@ -25,7 +25,6 @@
 		\node [style=none] (29) at (-4.5, -1.5) {};
 		\node [style=none] (30) at (-4.5, -0.25) {};
 		\node [style=none] (31) at (0, 0) {$=$};
-		\node [style=none, rotate=90] (32) at (-2.75, 0) {...};
 		\node [style=none] (33) at (1, 1.25) {};
 		\node [style=none] (34) at (4.5, 0.75) {};
 		\node [style=none, rotate=90] (35) at (1.5, -0.25) {...};
@@ -49,14 +48,13 @@
 		\draw [in=180, out=39, looseness=0.75] (17) to (18.center);
 		\draw [in=0, out=158, looseness=0.75] (17) to (16.center);
 		\draw [in=141, out=0, looseness=0.75] (19.center) to (17);
-		\draw [bend left] (17) to (7);
 		\draw (18.center) to (26.center);
 		\draw (22.center) to (27.center);
 		\draw (20.center) to (25.center);
 		\draw (30.center) to (9.center);
 		\draw (28.center) to (13.center);
 		\draw (29.center) to (10.center);
-		\draw [bend left] (7) to (17);
+		\draw (7) to (17);
 		\draw [in=-120, out=0] (41.center) to (39);
 		\draw [in=180, out=-60] (39) to (36.center);
 		\draw [in=180, out=45, looseness=0.75] (39) to (34.center);

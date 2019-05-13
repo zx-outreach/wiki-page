@@ -77,7 +77,7 @@ Among the three types of generating nodes (green spider, red spider, and Hadamar
 
 There are many different versions of the ZX-calculus, using different systems of rewrite rules as axioms. The following are some of the core set of rules, here given ``up to scalar factor'': i.e.\ two diagrams $D_1$ and $D_2$ are considered to be equal if their interpretations differ by a non-zero complex factor.
 
-\begin{tabular}{|c|p{8cm}|}
+\noindent\begin{tabular}{|c|p{8cm}|}
  \hline
  \tikzfig{Z-spider-fusion} & The \emph{green spider rule} corresponds to the fact that the green spider represents an orthonormal basis -- the computational basis. \\ %% what do we do about the fact that there must be at least one connection in the middle whereas everywhere else \ldots means ``0 or more''
  \tikzfig{X-spider-fusion} & The \emph{red spider rule} corresponds to the fact that the red spider represents an orthonormal basis -- the Hadamard-transformed basis. \\
@@ -85,7 +85,8 @@ There are many different versions of the ZX-calculus, using different systems of
  \tikzfig{colour-change} & The \emph{colour change rule} expresses the property that the Hadamard node maps between the computational basis and the Hadamard-transformed basis. \\
  \tikzfig{copy} & The \emph{copy rule} states that a green spider copies degree-1 red spiders. An analogous rule holds with the colours swapped. \\
  \tikzfig{bialgebra} & The \emph{bialgebra rule} expresses the property that computational and Hadamard-transformed basis are strongly complementary. \\
- \tikzfig{Euler-dec} & The \emph{Euler decomposition of the Hadamard node} expresses the fact that the Hadamard matrix -- like any unitary matrix -- can be expressed as a product of three rotations about two axes. \\
+ \tikzfig{Euler-dec} & The \emph{Euler decomposition of the Hadamard node} expresses the fact that the Hadamard matrix -- like any $2\times2$ unitary matrix -- can be expressed as a product of three rotations about two axes. \\
+ \tikzfig{pi-copy} & The \emph{$\pi$-copy rule} shows how the Pauli-$X$ matrix interacts with green spiders. An analogous rule holds with the colours swapped. \\
  \hline
 \end{tabular}
 
